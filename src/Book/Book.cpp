@@ -17,35 +17,35 @@ std::string Book::getISBN() const { return isbn; }
 std::string Book::getLocation() const { return location; }
 
 //Setters
-void Book::setTitle(const std::string& title) {
+void Book::setTitle(const std::string &newTitle){
     if (!title.empty()) {
-        this->title = title;
+        this->title = newTitle;
     } else {
         std::cout << "Title cannot be empty\n";
     }
 }
 
-void Book::setAuthor(const std::string& author) {
+void Book::setAuthor(const std::string& newAuthor) {
     if (!author.empty()) {
-        this->author = author;
+        this->author = newAuthor;
     } else {
         std::cout << "Author cannot be empty\n";
     }
 }
 
-void Book::setGenre(const std::string& genre) {
+void Book::setGenre(const std::string& newGenre) {
     if(!genre.empty()) {
-        this->genre = genre;
+        this->genre = newGenre;
     } else {
         this->genre = "None";
     }
 }
 
-void Book::setISBN(const std::string &isbn) {
+void Book::setISBN(const std::string& newIsbn) {
     //Need to add checking for correct isbn no.
-    this->isbn = isbn;
+    this->isbn = newIsbn;
 }
 
-void Book::setLocation(const std::string &location) {
-    this->location = location;
+void Book::setLocation(const std::string& newLocation) {
+    this->location = newLocation;
 }

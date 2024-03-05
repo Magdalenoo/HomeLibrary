@@ -3,7 +3,6 @@
 
 #include <string>
 
-
 class Book {
 private:
     std::string title;
@@ -26,11 +25,11 @@ public:
 
 
     //Setters
-    void setTitle(const std::string& title);
-    void setAuthor(const std::string& author);
-    void setGenre(const std::string& genre);
-    void setISBN(const std::string& isbn);
-    void setLocation(const std::string& location);
+    void setTitle(const std::string& newTitle);
+    void setAuthor(const std::string& newAuthor);
+    void setGenre(const std::string& newGenre);
+    void setISBN(const std::string& newIsbn);
+    void setLocation(const std::string& newLocation);
 };
 
 
