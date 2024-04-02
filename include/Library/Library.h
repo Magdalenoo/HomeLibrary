@@ -3,40 +3,38 @@
 
 #include "../../include/Book/Book.h"
 #include <iostream>
-#include <vector>
+#include <string>
+#include <sqlite3.h>
 
 class Library {
 private:
-    std::vector<Book> books;
+    //The SQLite database connection handle
+    sqlite3* db;
 
 public:
-
-    //Constructor
-    Library(std::vector<Book> books);
+    Library(const std::string& dbName);
+    ~Library();
 
     //Methods
-    //Adding a book to the library
-    void addBook(const Book& book);
-
-    //Removing a book from the library by isbn no.
-    void removeBookISBN(const std::string& isbn);
-
-    //Removing a book from the library by title
-    void removeBookTitle(const std::string& title);
-
+    bool openDatabase(const std::string& dbName);
+    void createTables();
+    bool addBook(const Book& book);
+    bool removeBook(int id);
+    std::vector<Book> getAllBooks();
+    void closeDatabase();
+/*
     //Searching for a book by title
-    std::vector<Book> searchByTitle(const std::string& title);
 
-    //Searching for a book by author
-    std::vector<Book> searchByAuthor(const std::string& author);
 
-    //Searching for a book by genre
-    std::vector<Book> searchByGenre(const std::string& genre);
+    //Searching for books by author
+
+
+    //Searching for books by genre
+
 
     //Retrieving all books from the library
-    std::vector<Book> getAllBooks() const;
 
+*/
 };
-
 
 #endif //HOMELIBRARY_LIBRARY_H

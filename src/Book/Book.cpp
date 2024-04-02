@@ -2,7 +2,8 @@
 #include <iostream>
 
 //Parameterized constructor
-Book::Book(std::string title, std::string author, std::string genre, std::string isbn, std::string location) : title(title), author(author), genre(genre), isbn(isbn), location(location) {
+Book::Book(std::string title, std::string author, std::string genre, std::string isbn, std::string location)
+: title(title), author(author), genre(genre), isbn(isbn), location(location) {
 }
 
 //Getters
